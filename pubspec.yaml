@@ -21,6 +21,7 @@ dependencies:
   #UTILS
   ns_utils:
     git: https://github.com/ajaynonstopio/ns_utils.git
+  flutter_hooks: ^0.14.1
 
 
 dev_dependencies:

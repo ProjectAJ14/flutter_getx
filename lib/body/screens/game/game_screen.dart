@@ -4,16 +4,14 @@ import 'package:get/get.dart';
 import 'package:ns_utils/src.dart';
 
 class GameScreen extends StatelessWidget {
-  final controller = Get.put(GameController());
-
   final TextStyle _textStyle = TextStyle(
     fontSize: FontSizes.getSp(100),
   );
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(GameController());
     return Scaffold(
-      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Text('Game target Screen'),
       ),
