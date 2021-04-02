@@ -5,14 +5,14 @@ class AfterMessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('After Message Screen'),
+          title: const Text('After Message Screen'),
         ),
         body: Center(
           child: Column(
             children: [
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () async {},
-                child: Text('Close Two screen'),
+                child: const Text('Close Two screen'),
               ),
             ],
           ),

@@ -5,7 +5,7 @@ class ThreadMessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Thread Message Screen'),
+        title: const Text('Thread Message Screen'),
       ),
     );
   }

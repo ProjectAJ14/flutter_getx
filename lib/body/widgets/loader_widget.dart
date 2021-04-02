@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/mind/utils/logs/logs.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +13,7 @@ class LoaderBackgroundWidget extends HookWidget {
       duration: _animationDuration,
     );
 
-    Animation<Color> colorAnimation = ColorTween(
+    var colorAnimation = ColorTween(
       begin: Colors.black12,
       end: Colors.black54,
     ).animate(CurvedAnimation(
@@ -22,11 +21,8 @@ class LoaderBackgroundWidget extends HookWidget {
       curve: Curves.fastOutSlowIn,
     ));
 
-    animationController.addListener(() {
-      appLogs('${animationController.value}');
-    });
-
     animationController.forward();
+
     return AnimatedBuilder(
       animation: animationController,
       builder: (BuildContext context, Widget child) {
@@ -35,7 +31,7 @@ class LoaderBackgroundWidget extends HookWidget {
           width: Get.width,
           color: colorAnimation.value,
           child: BackdropFilter(
-            child: Center(
+            child: const Center(
               child: CircularProgressIndicator(),
             ),
             filter: ImageFilter.blur(

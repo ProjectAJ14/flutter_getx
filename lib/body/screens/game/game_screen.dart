@@ -13,7 +13,7 @@ class GameScreen extends StatelessWidget {
     final controller = Get.put(GameController());
     return Scaffold(
       appBar: AppBar(
-        title: Text('Game target Screen'),
+        title: const Text('Game target Screen'),
       ),
       body: ListView(
         children: [
@@ -26,7 +26,7 @@ class GameScreen extends StatelessWidget {
                   style: _textStyle,
                 );
               }),
-              C50(),
+              const C50(),
               Obx(() {
                 return Text(
                   '${controller.second}',
@@ -35,26 +35,26 @@ class GameScreen extends StatelessWidget {
               }),
             ],
           ),
-          C50(),
+          const C50(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   controller.incrementFirst();
                 },
-                child: Text('+2'),
+                child: const Text('+2'),
               ),
-              C50(),
-              RaisedButton(
+              const C50(),
+              ElevatedButton(
                 onPressed: () {
                   controller.decrementSecond();
                 },
-                child: Text('-1'),
+                child: const Text('-1'),
               ),
             ],
           ),
-          C50(),
+          const C50(),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

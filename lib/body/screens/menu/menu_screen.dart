@@ -12,10 +12,10 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.back(),
+      onTap: Get.back,
       child: AnimatedContainer(
         color: Colors.transparent,
-        duration: Duration(seconds: 1),
+        duration: const Duration(seconds: 1),
         child: Center(
           child: Container(
             margin: EdgeInsets.only(left: Sizes.s40),
@@ -37,7 +37,7 @@ class MenuScreen extends StatelessWidget {
                     style: _textStyle,
                   ),
                 ),
-                Divider(),
+                const Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -45,7 +45,7 @@ class MenuScreen extends StatelessWidget {
                     style: _textStyle,
                   ),
                 ),
-                Divider(),
+                const Divider(),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(

@@ -2,17 +2,17 @@ import 'package:flutter_getx/mind/utils/enums/screen_state.dart';
 import 'package:get/get.dart';
 
 class ScreenController extends GetxController {
-  final _screenState = ScreenState.LOADED.obs;
+  final _screenState = ScreenState.loaded.obs;
 
   ScreenState get screenState => _screenState.value;
 
-  bool get isLoading => screenState == ScreenState.LOADING;
+  bool get isLoading => screenState == ScreenState.loading;
 
-  showLoading() {
-    _screenState.value = ScreenState.LOADING;
+  void showLoading() {
+    _screenState.value = ScreenState.loading;
   }
 
-  hideLoading() {
-    _screenState.value = ScreenState.LOADED;
+  void hideLoading() {
+    _screenState.value = ScreenState.loaded;
   }
 }

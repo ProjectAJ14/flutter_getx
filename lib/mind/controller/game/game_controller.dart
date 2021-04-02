@@ -13,17 +13,17 @@ class GameController extends GetxController {
 
   bool get result => sum == target;
 
-  incrementFirst() {
+  void incrementFirst() {
     first.value = first.value + 2;
     checkTarget();
   }
 
-  decrementSecond() {
+  void decrementSecond() {
     second.value = second.value - 1;
     checkTarget();
   }
 
-  checkTarget() {
+  void checkTarget() {
     if (result) {
       Get.snackbar(
         'Ohh Yehhh',

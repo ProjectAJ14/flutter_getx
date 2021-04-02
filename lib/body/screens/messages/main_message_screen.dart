@@ -5,7 +5,7 @@ class MainMessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Main Message Screen'),
+        title: const Text('Main Message Screen'),
       ),
     );
   }

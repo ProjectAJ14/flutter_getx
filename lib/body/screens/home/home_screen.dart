@@ -15,25 +15,25 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("=============HomeScreen rebuilding=====");
+    print('=============HomeScreen rebuilding=====');
     return LoaderWrapper(
       controller: controller,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Home Screen'),
+          title: const Text('Home Screen'),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   Get.to(GameScreen());
                 },
-                child: Text('Open Next Screen'),
+                child: const Text('Open Next Screen'),
               ),
-              C50(),
-              RaisedButton(
+              const C50(),
+              ElevatedButton(
                 onPressed: () async {
                   controller.showLoading();
                   await Get.to(
@@ -43,33 +43,37 @@ class HomeScreen extends StatelessWidget {
                   );
                   controller.hideLoading();
                 },
-                child: Text('Open Menu Screen'),
+                child: const Text('Open Menu Screen'),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () async {
                   controller.showLoading();
+                  Future.delayed(
+                    const Duration(seconds: 3),
+                    controller.hideLoading,
+                  );
                 },
-                child: Text('Show loader Screen'),
+                child: const Text('Show loader Screen'),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () async {
                   appLogs('Here $controller');
                 },
-                child: Text('Print Log Screen'),
+                child: const Text('Print Log Screen'),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () async {
-                  Get.to(
+                  await Get.to(
                     MainMessageScreen(),
                   );
-                  Get.to(
+                  await Get.to(
                     ThreadMessageScreen(),
                   );
-                  Get.to(
+                  await Get.to(
                     AfterMessageScreen(),
                   );
                 },
-                child: Text('Open Three screen'),
+                child: const Text('Open Three screen'),
               ),
             ],
           ),
